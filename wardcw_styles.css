@@ -1,0 +1,320 @@
+
+/*
+    Ward Putter Co. Home Page Styles
+
+    Author: Jon Ward
+    Date:   11/12/26
+
+    Filename: wardcw_styles.css
+*/
+
+/* HTML and Body Styles */
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: Arial, Helvetica, sans-serif;
+   background-color: rgb(243, 244, 246);
+   color: rgb(17, 24, 39);
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+}
+
+/* Header Styles */
+
+header {
+   background-color: black;
+   color: white;
+   min-height: 62px;
+   padding: 8px 30px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   border: 1px solid rgb(37, 53, 75);
+}
+
+.brand {
+   display: flex;
+   align-items: center;
+   gap: 12px;
+}
+
+.brand img {
+   width: 55px;
+   height: 45px;
+   object-fit: contain;
+}
+
+.brand h1 {
+   font-size: 19px;
+   font-weight: bold;
+}
+
+/* Navigation Styles */
+
+
+nav#mainLinks ul {
+   list-style-type: none;
+   display: flex;
+   gap: 18px;
+}
+
+nav#mainLinks li {
+   display: inline;
+}
+
+nav#mainLinks li:not(:last-child)::after {
+	content: "|";
+	color: white;
+	margin-left: 18px;
+}
+
+nav#mainLinks a {
+   color: white;
+   text-decoration: none;
+   font-size: 17px;
+   font-weight: bold;
+   text-transform: uppercase;
+}
+
+nav#mainLinks a:hover {
+   color: rgb(185, 161, 106);
+}
+
+/* Main Content Styles */
+
+main {
+   width: 94%;
+   max-width: 1600px;
+   margin: 30px auto;
+   flex: 1;
+}
+
+.page-title {
+   font-size: 24px;
+   margin-bottom: 15px;
+   color: rgb(23, 43, 70);
+}
+
+.content-grid {
+   display: grid;
+   grid-template-columns: 1fr 1.15fr;
+   gap: 24px;
+}
+
+/* Left Column Styles */
+
+.main-photo {
+   width: 100%;
+   height: 300px;
+   object-fit: cover;
+   display: block;
+}
+
+.quick-links {
+   padding: 20px;
+   font-size: 14px;
+   font-weight: bold;
+   color: rgb(23, 43, 70);
+}
+
+/* Right Column Styles */
+
+.welcome-box {
+   background: white;
+   border: 1px solid rgb(213, 219, 227);
+   border-radius: 7px;
+   padding: 24px;
+   min-height: 115px;
+   margin-bottom: 14px;
+}
+
+.welcome-box h2 {
+   font-size: 14px;
+   margin-bottom: 12px;
+   color: rgb(23, 40, 70);
+}
+
+.welcome-box p {
+   font-size: 14px;
+   line-height: 1.6;
+}
+
+.featured-images {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 20px;
+   align-items: start;
+}
+
+.featured-images img {
+   width: 100%;
+   height: 340px;
+   object-fit: cover;
+   display: block;
+}
+
+.chrome-logo {
+   width: 100%;
+   height: 240px;
+   object-fit: contain;
+   display: block;
+}
+
+
+/* Featured Putters Styles */
+
+.featured-putters {
+   margin-top: 30px;
+   padding: 20px;
+   background-color: white;
+   border: 1px solid rgb(213, 219, 227);
+   border-radius: 7px;
+}
+
+.featured-putters h2 {
+   font-size: 17px;
+   color: rgb(23, 43, 70);
+   margin-bottom: 18px;
+}
+
+.putter-grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 25px;
+   text-align: center;
+}
+
+.putter-item img {
+   width: 130px;
+   height: 115px;
+   object-fit: contain;
+   background-color: rgb(5, 5, 5);
+   display: block;
+   margin: auto;
+}
+
+.putter-item h3 {
+   font-size: 13px;
+   color: rgb(23, 43, 70);
+   margin-top: 10px;
+}
+
+.putter-item p {
+   font-size: 12px;
+   margin-top: 5px;
+}
+
+.view-garage {
+   text-align: right;
+   margin-top: 15px;
+}
+
+.view-garage a {
+   color: rgb(23, 43, 70);
+   font-size: 12px;
+   font-weight: bold;
+   text-decoration: none;
+}
+
+.view-garage a:hover {
+   color: rgb(185, 161, 106);
+   text-decoration: underline;
+}
+
+
+/* Footer Styles */
+
+footer {
+   background-color: rgb(5, 5, 5);
+   color: white;
+   border: 1px solid rgb(37, 53, 75);
+   padding: 12px 30px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 15px;
+   font-size: 11px;
+   font-weight: bold;
+}
+
+footer a{
+	color: white;
+	text-decoration:none;
+}
+
+footer a:hover {
+	color: rgb(185, 161, 106);
+	text-decoration:underline;
+}
+
+/* Mobile Styles */
+
+@media (max-width: 700px) {
+
+   header {
+      flex-direction: column;
+      gap: 12px;
+      padding: 12px;
+   }
+
+   nav#mainLinks ul {
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+
+   main {
+      padding: 20px;
+   }
+
+   .content-grid {
+      grid-template-columns: 1fr;
+   }
+
+   .featured-images {
+      grid-template-columns: 1fr 1fr;
+   }
+
+   footer {
+      flex-direction: column;
+      text-align: center;
+   }
+   
+   .putter-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+}
+
+	.putter-item img {
+	  width: 100%;
+	  height: 100px;
+}
+}
+
+@media (max-width: 420px) {
+
+   .featured-images {
+      grid-template-columns: 1fr;
+   }
+
+   .brand h1 {
+      font-size: 16px;
+   }
+   
+   .putter-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+}
+}
+<p>
+   <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+      <img style="border:0;width:88px;height:31px"
+           src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+           alt="Valid CSS!" />
+   </a>
+</p>
