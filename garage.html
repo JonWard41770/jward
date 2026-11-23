@@ -7,204 +7,6 @@
     <title>Ward Putter Co. | Garage</title>
     <link href="wardcw_styles.css" rel="stylesheet" />
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f3f4f6;
-            color: #111827;
-        }
-
-        /* HEADER */
-        header {
-            background-color: #050505;
-            color: white;
-            min-height: 62px;
-            padding: 8px 30px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border: 1px solid #25354b;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .brand img {
-            width: 55px;
-            height: 45px;
-            object-fit: contain;
-        }
-
-        .brand h1 {
-            font-size: 19px;
-        }
-
-        nav {
-            display: flex;
-            gap: 5px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 17px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #b9a16a;
-        }
-
-        /* MAIN CONTENT */
-        main {
-            max-width: 1250px;
-            margin: auto;
-            padding: 18px 40px 20px;
-            min-height: 400px;
-        }
-
-        .page-title {
-            font-size: 21px;
-            margin-bottom: 38px;
-            color: #172b46;
-        }
-
-        /* PRODUCT COMPARISON TABLE */
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: white;
-            font-size: 11px;
-            text-align: center;
-        }
-
-        .comparison-table th {
-            background-color: #050505;
-            color: white;
-            padding: 12px 8px;
-            font-size: 10px;
-        }
-
-        .comparison-table td {
-            padding: 10px 8px;
-            border: 1px solid #d5dbe3;
-            color: #25354b;
-        }
-
-        /* PRODUCT IMAGES */
-        .product-section {
-            display: grid;
-            grid-template-columns: 110px repeat(3, 1fr);
-            gap: 15px;
-            margin-top: 15px;
-            align-items: start;
-        }
-
-        .product-label {
-            font-size: 12px;
-            font-weight: bold;
-            padding: 3px 7px;
-            white-space: nowrap;
-        }
-
-        .product-card {
-            text-align: center;
-        }
-
-        .product-card h3 {
-            font-size: 16px;
-            letter-spacing: 1px;
-            margin-bottom: 3px;
-        }
-
-        .product-card img {
-            width: 140px;
-            height: 155px;
-            object-fit: contain;
-            background-color: #050505;
-        }
-		
-		/* GARAGE FEATURE IMAGE */
-        .garage-feature {
-            width: 100%;
-            margin-top: 35px;
-            margin-bottom: 25px;
-        }
-
-        .garage-feature img {
-            display: block;
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-            border-radius: 5px;
-        }
-
-        /* FOOTER */
-        footer {
-            background-color: #050505;
-            color: white;
-            border: 1px solid #25354b;
-            padding: 12px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 15px;
-            font-size: 11px;
-            font-weight: bold;
-        }
-
-        /* MOBILE RESPONSIVENESS */
-        @media (max-width: 700px) {
-            header {
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            nav {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            main {
-                padding: 20px 12px;
-            }
-
-            .comparison-table {
-                font-size: 9px;
-            }
-
-            .comparison-table th,
-            .comparison-table td {
-                padding: 8px 4px;
-            }
-
-            .product-section {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .product-label {
-                grid-column: 1 / -1;
-            }
-
-            .product-card img {
-                max-width: 100%;
-            }
-
-            footer {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -212,7 +14,7 @@
     <!-- HEADER -->
     <header>
       <div class="brand">
-         <img src="images/wpc_logo.png" alt="Ward Putter Co. Logo" />
+         <a href="index.html"><img src="images/wpc_logo.png" alt="Ward Putter Co. Logo" /></a>
          <h1>WARD PUTTER CO.</h1>
       </div>
       
@@ -228,7 +30,7 @@
    </header>
 
     <!-- MAIN CONTENT -->
-    <main>
+    <main class="garage-main">
 
         <h2 class="page-title">
             PRODUCTS | Compare Models
@@ -302,7 +104,7 @@
                 >
             </div>
 
-                </div>
+        </div>
 
         <!-- GARAGE FEATURE IMAGE -->
         <section class="garage-feature">
@@ -315,17 +117,28 @@
     </main>
 
     <!-- FOOTER -->
-    <footer>
+<footer>
    <p>Ward Putter Co.</p>
+
    <p>
-	<a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">
-	<img src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
-        alt="Valid CSS!"
-        style="border:0;width:88px;height:31px" />
-	</a>
-	</p>
+      <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+         <img src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+		 alt="Valid CSS!"
+		 class="validator-badge">
+      </a>
+   </p>
+
+   <p>
+      Social Media:
+      <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+      &nbsp; | &nbsp;
+      <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+      &nbsp; | &nbsp; @WardPutterCo
+   </p>
+
    <p>Email: <a href="mailto:wardputterco@example.com">wardputterco@example.com</a></p>
-   <p>Phone: <a href="tel:6608675309">(660) 867-5309</a> &nbsp; | &nbsp; @WardPutterCo</p>
+
+   <p>Phone: <a href="tel:+16608675309">(660) 867-5309</a></p>
 </footer>
 
 </body>

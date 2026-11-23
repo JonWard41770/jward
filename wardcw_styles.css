@@ -310,3 +310,132 @@ footer a:hover {
       grid-template-columns: 1fr;
       gap: 20px;
 }
+}
+	/*Garage Page Styles*/
+	
+   
+/* Garage Page Styles */
+
+.garage-main {
+   width: 94%;
+   max-width: 1250px;
+   margin: 30px auto;
+   padding: 18px 40px 20px;
+   flex: 1;
+}
+
+.garage-main .page-title {
+   font-size: 21px;
+   margin-bottom: 38px;
+   color: rgb(23, 43, 70);
+}
+
+/* PRODUCT COMPARISON TABLE */
+
+.comparison-table {
+   width: 100%;
+   border-collapse: collapse;
+   background-color: white;
+   font-size: 11px;
+   text-align: center;
+}
+
+.comparison-table th {
+   background-color: rgb(5, 5, 5);
+   color: white;
+   padding: 12px 8px;
+   font-size: 10px;
+}
+
+.comparison-table td {
+   padding: 10px 8px;
+   border: 1px solid rgb(213, 219, 227);
+   color: rgb(37, 53, 75);
+}
+
+/* PRODUCT IMAGES */
+
+.product-section {
+   display: grid;
+   grid-template-columns: 110px repeat(3, 1fr);
+   gap: 15px;
+   margin-top: 15px;
+   align-items: start;
+}
+
+.product-label {
+   font-size: 12px;
+   font-weight: bold;
+   padding: 3px 7px;
+   white-space: nowrap;
+}
+
+.product-card {
+   text-align: center;
+}
+
+.product-card h3 {
+   font-size: 16px;
+   letter-spacing: 1px;
+   margin-bottom: 3px;
+}
+
+.product-card img {
+   width: 140px;
+   height: 155px;
+   object-fit: contain;
+   background-color: rgb(5, 5, 5);
+}
+
+/* GARAGE FEATURE IMAGE */
+
+.garage-feature {
+   width: 100%;
+   margin-top: 35px;
+   margin-bottom: 25px;
+}
+
+.garage-feature img {
+   display: block;
+   width: 100%;
+   height: auto;
+   object-fit: contain;
+   border-radius: 5px;
+}
+
+/* GARAGE MOBILE STYLES */
+
+@media (max-width: 700px) {
+   .garage-main {
+      padding: 20px 12px;
+   }
+
+   .comparison-table {
+      font-size: 9px;
+   }
+
+   .comparison-table th,
+   .comparison-table td {
+      padding: 8px 4px;
+   }
+
+   .product-section {
+      grid-template-columns: 1fr 1fr;
+   }
+
+   .product-label {
+      grid-column: 1 / -1;
+   }
+
+   .product-card img {
+      max-width: 100%;
+   }
+}
+
+/* VALIDATOR IMAGE */
+
+.validator-badge {
+   border: 0;
+   width: 88px;
+   height: 31px;
+}
